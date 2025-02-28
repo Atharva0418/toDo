@@ -28,6 +28,7 @@ public class ToDoController {
   @PostMapping("/add")
   public ResponseEntity<ToDo> createToDo(@RequestBody ToDo toDo) {
     toDoService.createToDo(toDo);
+    System.out.println("Hello");
 
     return new ResponseEntity<>(toDo, HttpStatus.CREATED);
   }
